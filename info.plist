@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.scottlee.ots</string>
+	<key>category</key>
+	<string>Tools</string>
+	<key>connections</key>
+	<dict>
+		<key>BB4FCEDA-A055-4022-BE05-A9D2E24CFB9E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>1E46224B-572D-42F6-98E9-1CE17F9055F1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+		<key>CBFD6A75-F1D3-4ECA-8361-7B7121031C42</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>BB4FCEDA-A055-4022-BE05-A9D2E24CFB9E</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Scott Lee</string>
+	<key>description</key>
+	<string>Share information securely using the One-Time Secret service.</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>One-Time Secret</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>63</integer>
+				<key>script</key>
+				<string>customerID=''
+key=''
+
+php -f script.php ${customerID} ${key} "{query}"</string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>BB4FCEDA-A055-4022-BE05-A9D2E24CFB9E</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>secret</string>
+				<key>subtext</key>
+				<string>secrete | password (optional) | recipient@email.com (optional)</string>
+				<key>text</key>
+				<string>New secret</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.keyword</string>
+			<key>uid</key>
+			<string>CBFD6A75-F1D3-4ECA-8361-7B7121031C42</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>autopaste</key>
+				<false/>
+				<key>clipboardtext</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.clipboard</string>
+			<key>uid</key>
+			<string>1E46224B-572D-42F6-98E9-1CE17F9055F1</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>############################################
+# Setup
+############################################
+
+1) Create an account @ https://onetimesecret.com
+2) Obtain your API key for OTS (https://onetimesecret.com/account#apikey-tab)
+3) Add your OTS email address to the workflow script.
+4) Add your API key to the workflow script.
+
+############################################
+# Usage
+############################################</string>
+	<key>uidata</key>
+	<dict>
+		<key>1E46224B-572D-42F6-98E9-1CE17F9055F1</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>BB4FCEDA-A055-4022-BE05-A9D2E24CFB9E</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+		<key>CBFD6A75-F1D3-4ECA-8361-7B7121031C42</key>
+		<dict>
+			<key>ypos</key>
+			<real>130</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>https://github.com/scottlee/alfred-one-time-secret</string>
+</dict>
+</plist>
