@@ -2,6 +2,8 @@
 
 An Alfred workflow for sharing sensitive information with onetimesecret.com. Copies the secret URL to the clipboard.
 
+[Download the workflow](https://github.com/scottlee/alfred-one-time-secret/blob/master/One-Time%20Secret.alfredworkflow?raw=true)
+
 ## Setup
 
 1. Create an account @ https://onetimesecret.com
